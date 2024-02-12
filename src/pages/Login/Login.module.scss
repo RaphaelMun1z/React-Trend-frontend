@@ -1,0 +1,146 @@
+.container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+
+    .landingScreen {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 65%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+
+        .insideLandingScreen {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            height: fit-content;
+
+            h1 {
+                font-size: 120pt;
+                line-height: 160px;
+                color: #ff0077;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            p {
+                font-size: 17pt;
+                text-align: center;
+                font-weight: 300;
+
+                span {
+                    color: blueviolet;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .content {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 35%;
+        height: 100%;
+        gap: 1em;
+        padding: 0 1em;
+
+        .insideContent {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100%;
+            height: fit-content;
+            gap: 1em;
+            background-color: rgb(215, 225, 238);
+            padding: 8em 2em;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid #fff;
+
+            h1 {
+                font-size: 13pt;
+                font-weight: 400;
+                text-align: center;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            form {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                width: fit-content;
+                height: fit-content;
+                gap: 10px;
+
+                label {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: nowrap;
+                    gap: 1em;
+
+                    input {
+                        font-size: 12pt;
+                        padding: .2em;
+                    }
+                }
+
+                button {
+                    position: relative;
+                    display: flex;
+                    width: fit-content;
+                    height: fit-content;
+                    padding: .3em 2em;
+                    font-size: 12pt;
+                }
+            }
+
+            .actions {
+                position: relative;
+                display: flex;
+                width: fit-content;
+                height: fit-content;
+            }
+        }
+
+        .newUser {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100%;
+            height: fit-content;
+            border: 5px solid #fff;
+            background-color: rgb(215, 225, 238);
+            padding: 2em;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                font-size: 14pt;
+            }
+
+            a {
+                font-size: 18pt;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
