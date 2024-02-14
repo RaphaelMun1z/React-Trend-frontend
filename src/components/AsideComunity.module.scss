@@ -1,0 +1,78 @@
+.comunity {
+    position: relative;
+    display: flex;
+    flex: 1 1 27%;
+    height: 100%;
+    min-height: 100vh;
+    padding: 0 1em;
+
+    .insideComunity {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: fit-content;
+        gap: 10px;
+
+        .visit {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: fit-content;
+            background-color: #fff;
+            padding: 1em;
+            border-radius: 10px;
+
+            h1 {
+                font-size: 16pt;
+                font-weight: 500;
+            }
+
+            h4 {
+                font-size: 12pt;
+                font-weight: 300;
+                margin-top: .5em;
+
+                a {
+                    position: relative;
+                    display: flex;
+                    width: fit-content;
+                    height: fit-content;
+                    background-color: #5627ff;
+                    font-weight: 600;
+                    font-size: 12pt;
+                    border-radius: 10px;
+                    padding: 0.5em 2em;
+                    color: #fff;
+                    text-decoration: none;
+                    margin-top: .2em;
+                }
+            }
+        }
+
+        .friends {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: fit-content;
+            background-color: #fff;
+            padding: 1em;
+            min-height: 400px;
+            border-radius: 10px;
+        }
+
+        .comunitys {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: fit-content;
+            background-color: #fff;
+            padding: 1em;
+            min-height: 400px;
+            border-radius: 10px;
+        }
+    }
+}

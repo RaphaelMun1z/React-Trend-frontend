@@ -3,6 +3,7 @@
     display: flex;
     width: 100%;
     height: fit-content;
+    min-height: inherit;
 
     .landingScreen {
         position: relative;
@@ -51,9 +52,9 @@
         flex-wrap: wrap;
         flex-direction: column;
         width: 35%;
-        height: 100%;
+        height: auto;
         gap: 1em;
-        padding: 0 1em;
+        padding: 0 0 0 1em;
 
         .insideContent {
             position: relative;
@@ -87,12 +88,13 @@
                 width: fit-content;
                 height: fit-content;
                 gap: 10px;
+                max-width: 100%;
 
                 label {
                     position: relative;
                     display: flex;
                     align-items: center;
-                    flex-wrap: nowrap;
+                    flex-wrap: wrap;
                     gap: 1em;
 
                     input {
@@ -111,6 +113,17 @@
                 }
             }
 
+            .error {
+                position: relative;
+                display: flex;
+                color: red;
+                font-weight: 600;
+                font-size: 13pt;
+                border-left: 2px solid red;
+                padding: 0 0 0 .5em;
+                margin-right: auto;
+            }
+
             .actions {
                 position: relative;
                 display: flex;
@@ -122,6 +135,7 @@
         .newUser {
             position: relative;
             display: flex;
+            flex: 1 1;
             flex-wrap: wrap;
             flex-direction: column;
             width: 100%;

@@ -1,0 +1,36 @@
+.alertMessage {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    background-color: #edfdc4;
+    padding: 2em;
+    border-radius: 10px;
+    gap: 1em;
+
+    h1 {
+        font-size: 14pt;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 12pt;
+        font-weight: 400;
+    }
+
+    a {
+        position: relative;
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+        background-color: #5627ff;
+        font-weight: 600;
+        font-size: 12pt;
+        border-radius: 10px;
+        padding: .5em 2em;
+        color: #fff;
+        text-decoration: none;
+    }
+}

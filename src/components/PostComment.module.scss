@@ -1,0 +1,90 @@
+.comment {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+
+    .commentProfileImage {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 1 20%;
+        height: fit-content;
+        min-height: fit-content;
+        padding: 0;
+
+        .image {
+            position: relative;
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            justify-content: center;
+            align-items: center;
+            padding: 1em;
+
+            img {
+                position: relative;
+                display: flex;
+                width: 90px;
+                height: 90px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .commentContent {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: fit-content;
+        padding: .7em 0em;
+
+        .insideCommentContent {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100%;
+            height: fit-content;
+
+            .header {
+                position: relative;
+                display: flex;
+                width: 100%;
+                height: fit-content;
+                justify-content: space-between;
+
+                .userName {
+                    position: relative;
+                    display: flex;
+                    width: fit-content;
+                    height: fit-content;
+                    font-size: 12pt;
+                    color: purple;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+
+                .time {
+                    position: relative;
+                    display: flex;
+                    width: fit-content;
+                    height: fit-content;
+                    color: #9c9c9c;
+                }
+            }
+
+            .postContent {
+                position: relative;
+                display: flex;
+                width: 100%;
+                height: fit-content;
+
+                p {
+                    font-size: 12pt;
+                }
+            }
+        }
+    }
+}
