@@ -1,0 +1,147 @@
+.mainContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+
+    .leftEmptyContainer {
+        flex: 1 1 20%;
+    }
+
+    .rightEmptyContainer {
+        flex: 1 1 27%;
+    }
+
+    .contentContainer {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex: 1 1 53%;
+        background-color: #fff;
+        border-radius: 10px;
+        height: 100%;
+        min-height: 100vh;
+
+        h2 {
+            font-size: 25pt;
+            margin: .5em 0 0 .5em;
+            color: #5f5e5e;
+        }
+
+        .header {
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: fit-content;
+
+            .imageContainer {
+                position: relative;
+                display: flex;
+                width: 30%;
+                height: auto;
+                min-height: 20vh;
+                padding: 1em;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    position: relative;
+                    display: flex;
+                    width: 145px;
+                    height: 145px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+
+            .infoContainer {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                width: 70%;
+                height: auto;
+                padding: 1em;
+
+                h1 {
+                    font-size: 25pt;
+                    font-weight: 700;
+                    color: #5f5e5e;
+                }
+
+                .postNumber {
+                    font-size: 14pt;
+                    margin-top: .5em;
+                    color: #5f5e5e;
+
+                    span {
+                        font-weight: 700;
+                    }
+                }
+
+                .description {
+                    font-size: 12pt;
+                    margin-top: .5em;
+                    border-radius: 10px;
+                    color: #5f5e5e;
+                }
+
+                .actions {
+                    position: relative;
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: fit-content;
+                    height: fit-content;
+                    margin-top: 1em;
+                    gap: .5em;
+
+                    button {
+                        position: relative;
+                        display: flex;
+                        width: fit-content;
+                        height: fit-content;
+                        border: none;
+                        background-color: #5627ff;
+                        font-weight: 600;
+                        font-size: 12pt;
+                        border-radius: 10px;
+                        padding: 0.5em 2em;
+                        color: #fff;
+                        text-decoration: none;
+                    }
+
+                    .accountEdit {
+                        background-color: #5627ff;
+                    }
+
+                    .accountReport {
+                        background-color: #ff2727;
+                    }
+                }
+            }
+        }
+
+        .body {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: fit-content;
+            gap: 1em;
+            padding: 1em;
+
+            .postCard {
+                position: relative;
+                display: flex;
+                width: 100%;
+                height: fit-content;
+                min-height: 100px;
+                background-color: #fdf6f6;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                border-radius: 10px;
+            }
+        }
+    }
+}

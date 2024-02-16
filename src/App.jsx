@@ -30,6 +30,7 @@ function App() {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       setUser(user)
+      //setUser(null)
     })
   }, [auth])
 
@@ -44,11 +45,11 @@ function App() {
           <Navbar />
           <div className={styles.container}>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/profile" element={<Profile />} />
+              <Route path="/" element={user ? <Home /> : <Login />} />
+              <Route path="/about" element={user ? <About /> : <Navigate to="/login" />} />
+              <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
+              <Route path="/register" element={user ? <Navigate to="/" /> : <Register />} />
+              <Route path="/profile" element={user ? <Profile /> : <Navigate to="/login" />} />
             </Routes>
           </div>
           <Footer />

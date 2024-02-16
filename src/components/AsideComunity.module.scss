@@ -47,6 +47,13 @@
                     color: #fff;
                     text-decoration: none;
                     margin-top: .2em;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+
+                    svg {
+                        font-size: 18pt;
+                    }
                 }
             }
         }

@@ -83,6 +83,7 @@
 
                 p {
                     font-size: 14pt;
+                    gap: 5px;
                 }
             }
 
@@ -98,6 +99,13 @@
                 background-color: blueviolet;
                 color: #fff;
                 cursor: pointer;
+                gap: 5px;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    font-size: 18pt;
+                }
             }
 
             .comments {
@@ -111,6 +119,7 @@
                 border-radius: 10px;
                 margin-bottom: 1em;
                 padding: 0 1em 0 0;
+                transition: all 1s ease-in-out;
             }
         }
     }

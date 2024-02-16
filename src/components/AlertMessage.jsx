@@ -1,5 +1,7 @@
 import styles from './AlertMessage.module.scss'
 
+import { IoIosArrowForward } from "react-icons/io";
+
 const AlertMessage = () => {
     return (
         <div className={styles.alertMessage}>
@@ -12,7 +14,7 @@ const AlertMessage = () => {
                 <br />
                 Raphael Muniz Varela
             </h3>
-            <a href='https://www.linkedin.com/in/raphael-muniz-7119911a2/' target='_blank'>Acessar meu Linkedin</a>
+            <a href='https://www.linkedin.com/in/raphael-muniz-7119911a2/' target='_blank'>Acessar meu Linkedin<IoIosArrowForward /></a>
         </div>
     )
 }

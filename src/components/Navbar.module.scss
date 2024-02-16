@@ -26,6 +26,7 @@ header {
                 display: flex;
                 width: fit-content;
                 height: fit-content;
+                padding-left: 1em;
 
                 a {
                     font-size: 45pt;
@@ -107,7 +108,9 @@ header {
                         justify-content: center;
                         align-items: center;
 
-                        a {
+                        button{
+                            border: none;
+                            background-color: transparent;
                             position: relative;
                             display: flex;
                             width: 100%;
@@ -118,13 +121,39 @@ header {
                             color: #fff;
                             font-size: 17pt;
                             text-decoration: none;
-                            background-color: rgb(122, 171, 232);
                             justify-content: flex-start;
                             align-items: center;
+                            gap: 5px;
+
+                            svg{
+                                color: #fff;
+                                font-size: 22pt;
+                            }
+                        }
+
+                        a {
+                            position: relative;
+                            display: flex;
+                            width: 100%;
+                            height: 100%;
+                            font-weight: 500;
+                            border-radius: 5px;
+                            padding: .2em 1em;
+                            color: #222;
+                            font-size: 17pt;
+                            text-decoration: none;
+                            justify-content: flex-start;
+                            align-items: center;
+                            gap: 5px;
+                        }
+
+                        button.logout {
+                            background-color: #ff2727 !important;
                         }
 
                         a.active {
-                            background-color: rgb(88, 137, 196);
+                            background-color: #222;
+                            color: #fff;
                         }
                     }
                 }
@@ -132,6 +161,8 @@ header {
         }
 
         &.searchBarContainer {
+            padding-right: 1em;
+
             .searchBar {
                 position: relative;
                 display: flex;
@@ -166,6 +197,7 @@ header {
                     background-color: #ff0077;
                     color: #fff;
                     border-radius: 10px;
+                    font-size: 25pt;
                 }
             }
         }

@@ -1,5 +1,7 @@
 import styles from './Home.module.scss'
 
+import { useState } from 'react'
+
 import AsideProfile from '../../components/AsideProfile'
 import AsideComunity from '../../components/AsideComunity'
 
@@ -8,7 +10,10 @@ import NewPost from '../../components/NewPost'
 import Post from '../../components/Post'
 import PostsFilter from '../../components/PostsFilter'
 
+import { IoMdAdd } from "react-icons/io";
+
 const Home = () => {
+  const [createPost, setCreatePost] = useState(false)
 
   return (
     <div className={styles.mainContainer}>
@@ -22,7 +27,15 @@ const Home = () => {
 
           <div className={styles.postsContainer}>
 
-            <NewPost />
+            {!createPost && (
+              <div className={styles.createPostButtonContainer}>
+                <button onClick={() => setCreatePost(true)}>Criar nova publicação<IoMdAdd /></button>
+              </div>
+            )}
+
+            {createPost && (
+              <NewPost setCreatePost={setCreatePost} />
+            )}
 
             <PostsFilter />
 
