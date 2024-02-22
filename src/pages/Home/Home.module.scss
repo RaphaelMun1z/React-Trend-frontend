@@ -30,12 +30,36 @@
                 height: fit-content;
                 padding: 0 .5em 3em .5em;
 
+                &>div{
+                    margin-bottom: 2em;
+                }
+
+                .noposts{
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    height: fit-content;
+                    background-color: #fff;
+                    padding: 1em;
+                    border-radius: 10px;
+                    margin-bottom: 1em;
+
+                    p{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        font-size: 15pt;
+                        font-weight: 500;
+                        gap: 5px;
+                    }
+                }
+
                 .createPostButtonContainer {
                     position: relative;
                     display: flex;
                     width: 100%;
                     height: fit-content;
-                    margin: 0 0 1em 0;
+                    margin: 0;
 
                     button {
                         position: relative;

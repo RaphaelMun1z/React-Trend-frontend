@@ -20,6 +20,8 @@ import About from './pages/About/About'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Profile from './pages/Profile/Profile'
+import Search from './pages/Search/Search'
+import PostPage from './pages/PostPage/PostPage'
 
 function App() {
   const [user, setUser] = useState(undefined)
@@ -30,7 +32,6 @@ function App() {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       setUser(user)
-      //setUser(null)
     })
   }, [auth])
 
@@ -50,6 +51,8 @@ function App() {
               <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
               <Route path="/register" element={user ? <Navigate to="/" /> : <Register />} />
               <Route path="/profile" element={user ? <Profile /> : <Navigate to="/login" />} />
+              <Route path="/search" element={user ? <Search /> : <Navigate to="/login" />} />
+              <Route path="/search/:uid" element={user ? <PostPage /> : <Navigate to="/login" />} />
             </Routes>
           </div>
           <Footer />

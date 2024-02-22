@@ -1,6 +1,9 @@
 import styles from './Home.module.scss'
 
+import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+
+import { useFetchDocuments } from '../../hooks/useFetchDocuments'
 
 import AsideProfile from '../../components/AsideProfile'
 import AsideComunity from '../../components/AsideComunity'
@@ -11,9 +14,11 @@ import Post from '../../components/Post'
 import PostsFilter from '../../components/PostsFilter'
 
 import { IoMdAdd } from "react-icons/io";
+import { BsPostcard } from "react-icons/bs";
 
 const Home = () => {
   const [createPost, setCreatePost] = useState(false)
+  const { documents: posts, loading } = useFetchDocuments("posts")
 
   return (
     <div className={styles.mainContainer}>
@@ -27,6 +32,7 @@ const Home = () => {
 
           <div className={styles.postsContainer}>
 
+            {/* Create post */}
             {!createPost && (
               <div className={styles.createPostButtonContainer}>
                 <button onClick={() => setCreatePost(true)}>Criar nova publicação<IoMdAdd /></button>
@@ -37,14 +43,31 @@ const Home = () => {
               <NewPost setCreatePost={setCreatePost} />
             )}
 
-            <PostsFilter />
+            {/* Create filter */}
+            {posts && posts.length > 0 && (
+              <PostsFilter />
+            )}
 
-            <Post
-              image="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_37.jpg"
-              name="Teemo Bandópolis"
-              time="há 1 hora"
-              msg="🍄 Hey, invocadores! Teemo aqui, pronto para plantar cogumelos e espalhar alegria! 🌼 Quem está pronto para um pouco de fofura? #CapitãoTeemoNaÁrea"
-            />
+            {/* Posts view */}
+            {posts && posts.length === 0 && (
+              <div className={styles.noposts}>
+                <p><BsPostcard />Ainda não há publicações.</p>
+              </div>
+            )}
+
+            {loading && (
+              <p>Carregando...</p>
+            )}
+            {posts && posts.map((post) => (
+              <Post
+                userProfileImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLIjxE5kUUdT81FoWXp9le9xwVWfRwFg2uWw&usqp=CAU"
+                image={post.imageUrl}
+                name={post.createdBy}
+                time={post.createdAt}
+                msg={post.body}
+                id={post.id}
+              />
+            ))}
 
             {/* <div className={styles.post}>
               <div className={styles.profileImage}>

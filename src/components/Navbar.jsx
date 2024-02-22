@@ -3,7 +3,7 @@ import styles from './Navbar.module.scss'
 import { useAuthentication } from '../hooks/useAuthentication'
 import { useAuthValue } from '../context/AuthContext'
 
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 import { FaBars, FaHome } from "react-icons/fa";
@@ -20,6 +20,18 @@ const Navbar = () => {
     const { logout } = useAuthentication()
 
     const [navbarIsOpen, setNavbarIsOpen] = useState(false)
+
+    const [query, setQuery] = useState("")
+
+    const navigate = useNavigate()
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        if (query) {
+            return navigate(`/search?q=${query}`)
+        }
+    }
 
     return (
         <header>
@@ -85,10 +97,10 @@ const Navbar = () => {
             </div>
             <div className={styles.searchBarContainer}>
                 {user && (
-                    <div className={styles.searchBar}>
-                        <input type="text" placeholder='Buscar' />
+                    <form className={styles.searchBar} onSubmit={handleSubmit}>
+                        <input type="text" placeholder='Buscar publicação por descrição (exata)' onChange={(e) => setQuery(e.target.value)}/>
                         <button type='submit'><CiSearch /></button>
-                    </div>
+                    </form>
                 )}
             </div>
         </header>

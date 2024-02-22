@@ -6,8 +6,9 @@ import PostComment from './PostComment'
 import AddComment from './AddComment'
 
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
-const Post = (props) => {
+const Post = (post) => {
     const [showComments, setShowComments] = useState(false)
 
     return (
@@ -15,20 +16,24 @@ const Post = (props) => {
 
             <div className={styles.profileImage}>
                 <div className={styles.image}>
-                    <img src={props.image} alt="Imagem do usuário" />
+                    <img src={post.userProfileImage} alt="Imagem do usuário" />
                 </div>
             </div>
 
             <div className={styles.content}>
                 <div className={styles.insideContent}>
-
-                    <div className={styles.header}>
-                        <div className={styles.userName}>{props.name}</div>
-                        <div className={styles.time}>{props.time}</div>
+                    <Link to={`/search/${post.id}`}>
+                        <div className={styles.header}>
+                            <div className={styles.userName}>{post.name}</div>
+                            <div className={styles.time}>{new Date(post.time.seconds * 1000).toLocaleDateString("pt-BR")}</div>
+                        </div>
+                    </Link>
+                    <div className={styles.postImage}>
+                        <img src={post.image} alt="Imagem do post" />
                     </div>
 
                     <div className={styles.postContent}>
-                        <p>{props.msg}</p>
+                        <p>{post.msg}</p>
                     </div>
 
                     {showComments && (
@@ -64,6 +69,7 @@ const Post = (props) => {
                 </div>
             </div>
         </div>
+
     )
 }
 

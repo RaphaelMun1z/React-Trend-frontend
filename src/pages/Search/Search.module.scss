@@ -1,0 +1,84 @@
+.mainContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+
+    .leftEmptyContainer {
+        flex: 1 1 20%;
+    }
+
+    .rightEmptyContainer {
+        flex: 1 1 27%;
+    }
+
+    .contentContainer {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex: 1 1 53%;
+        background-color: #fff;
+        border-radius: 10px;
+        height: 100%;
+
+        .noposts {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100%;
+            height: fit-content;
+            background-color: #fff;
+            padding: 1em;
+            border-radius: 10px;
+            margin-bottom: 1em;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                position: relative;
+                display: flex;
+                align-items: center;
+                font-size: 15pt;
+                font-weight: 500;
+                gap: 5px;
+            }
+
+            a {
+                position: relative;
+                display: flex;
+                width: fit-content;
+                height: fit-content;
+                text-decoration: none;
+                padding: 0.5em 1.5em;
+                border-radius: 10px;
+                font-size: 10pt;
+                margin: 1.5em 0 0.5em 0;
+                background-color: blueviolet;
+                color: #fff;
+                cursor: pointer;
+                gap: 5px;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                margin-top: 5px;
+            }
+        }
+
+        .searchTitle{
+            position: relative;
+            display: flex;
+            width: fit-content;
+            height: fit-content;
+            padding: 1em;
+            font-weight: 600;
+
+            span{
+                margin: 0 .5em;
+                font-weight: 400;
+            }
+        }
+    }
+}

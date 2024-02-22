@@ -38,7 +38,7 @@
         display: flex;
         width: 100%;
         height: fit-content;
-        padding: .7em .5em;
+        padding: .7em 1em .7em .5em;
 
         .insideContent {
             position: relative;
@@ -47,6 +47,15 @@
             flex-direction: column;
             width: 100%;
             height: fit-content;
+
+            a{
+                position: relative;
+                display: flex;
+                width: 100%;
+                height: fit-content;
+                color: inherit;
+                text-decoration: none;
+            }
 
             .header {
                 position: relative;
@@ -72,6 +81,28 @@
                     width: fit-content;
                     height: fit-content;
                     color: #9c9c9c;
+                }
+            }
+
+            .postImage {
+                position: relative;
+                display: flex;
+                width: 100%t;
+                height: 600px;
+                background-color: blue;
+                border-radius: 10px;
+                overflow: hidden;
+                margin-bottom: .5em;
+                margin-top: .3em;
+
+                img{
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 10px;
                 }
             }
 
