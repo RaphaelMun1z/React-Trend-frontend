@@ -14,6 +14,7 @@
         justify-content: center;
         align-items: center;
         background-color: #fff;
+        border-radius: 20px;
 
         .insideLandingScreen {
             position: relative;
@@ -24,6 +25,7 @@
             align-items: center;
             width: fit-content;
             height: fit-content;
+            padding: 8em;
 
             h1 {
                 font-size: 120pt;
@@ -39,7 +41,7 @@
                 font-weight: 300;
 
                 span {
-                    color: blueviolet;
+                    color: #ff0077;
                     font-weight: 700;
                 }
             }
@@ -64,11 +66,12 @@
             width: 100%;
             height: fit-content;
             gap: 1em;
-            background-color: rgb(215, 225, 238);
-            padding: 8em 2em;
+            padding: 4em 2em;
             justify-content: center;
             align-items: center;
             border: 5px solid #fff;
+            background-color: #fff;
+            border-radius: 20px;
 
             h1 {
                 font-size: 13pt;
@@ -87,19 +90,31 @@
                 flex-direction: column;
                 width: fit-content;
                 height: fit-content;
-                gap: 10px;
-                max-width: 100%;
+                gap: .8em;
 
                 label {
                     position: relative;
                     display: flex;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    gap: 1em;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    flex-wrap: nowrap;
+                    gap: .2em;
+
+                    p {
+                        font-size: 15pt;
+                        font-weight: 400;
+                    }
 
                     input {
                         font-size: 12pt;
                         padding: .2em;
+                        background-color: transparent;
+                        border-radius: 10px;
+                        border: none;
+                        width: 400px;
+                        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                        background-color: rgb(215, 225, 238);
+                        padding: .7em 1em;
                     }
                 }
 
@@ -108,8 +123,40 @@
                     display: flex;
                     width: fit-content;
                     height: fit-content;
-                    padding: .3em 2em;
+                    background-color: #2db370;
+                    border: none;
+                    font-weight: 600;
                     font-size: 12pt;
+                    border-radius: 10px;
+                    padding: .5em 2em;
+                    color: #fff;
+                    text-decoration: none;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+                    &:disabled {
+                        opacity: .5;
+                        cursor: no-drop;
+
+                        svg {
+                            animation: rotate 2s linear infinite;
+                        }
+
+                        @keyframes rotate {
+                            from {
+                                transform: rotate(0deg);
+                            }
+
+                            to {
+                                transform: rotate(360deg);
+                            }
+                        }
+                    }
+
+                    svg {
+                        font-size: 18pt;
+                    }
                 }
             }
 
@@ -129,6 +176,26 @@
                 display: flex;
                 width: fit-content;
                 height: fit-content;
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                    position: relative;
+                    display: flex;
+                    width: fit-content;
+                    height: fit-content;
+                    background-color: #5627ff;
+                    border: none;
+                    font-weight: 600;
+                    font-size: 12pt;
+                    border-radius: 10px;
+                    padding: 0.5em 2em;
+                    color: #fff;
+                    text-decoration: none;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                }
             }
         }
 
@@ -145,15 +212,29 @@
             padding: 2em;
             justify-content: center;
             align-items: center;
+            border-radius: 20px;
 
             p {
                 font-size: 14pt;
             }
 
             a {
-                font-size: 18pt;
+                color: inherit;
+                text-decoration: none;
+                position: relative;
+                display: flex;
+                width: fit-content;
+                height: fit-content;
+                background-color: #5627ff;
+                border: none;
                 font-weight: 600;
-                text-transform: uppercase;
+                font-size: 12pt;
+                border-radius: 10px;
+                padding: 0.5em 2em;
+                color: #fff;
+                text-decoration: none;
+                justify-content: center;
+                align-items: center;
             }
         }
     }

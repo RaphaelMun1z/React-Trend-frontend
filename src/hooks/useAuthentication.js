@@ -48,9 +48,7 @@ export const useAuthentication = () => {
             return user
 
         } catch (error) {
-            console.log(error.messsage)
-            console.log(typeof error.messsage)
-
+            console.log(error)
             let systemErrorMessage
 
             if (error.message.includes("Password")) {

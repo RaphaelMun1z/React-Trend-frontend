@@ -2,13 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDm7bGE94X60loTZBjq-PRWB9rusavfa70",
-    authDomain: "miniblog-f4a7c.firebaseapp.com",
-    projectId: "miniblog-f4a7c",
-    storageBucket: "miniblog-f4a7c.appspot.com",
-    messagingSenderId: "925289741684",
-    appId: "1:925289741684:web:039310acc68c9aae74c021"
+    apiKey: "AIzaSyBxE6AjKO098tjpwOVYAOtm9ITdbmTKiLc",
+    authDomain: "trend-baa3d.firebaseapp.com",
+    projectId: "trend-baa3d",
+    storageBucket: "trend-baa3d.appspot.com",
+    messagingSenderId: "482071703007",
+    appId: "1:482071703007:web:aab0a2677095fcb431686a"
 };
+
 
 const app = initializeApp(firebaseConfig);
 
