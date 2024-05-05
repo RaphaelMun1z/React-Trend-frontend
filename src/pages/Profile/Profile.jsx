@@ -27,7 +27,7 @@ const Profile = () => {
             <div className={styles.contentContainer}>
                 <div className={styles.header}>
                     <div className={styles.imageContainer}>
-                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_37.jpg" alt="Foto de perfil" />
+                        <img src="/user-image.png" alt="Foto de perfil" />
                     </div>
                     <div className={styles.infoContainer}>
                         <h1>{user.displayName}</h1>
