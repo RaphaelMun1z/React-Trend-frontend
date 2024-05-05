@@ -48,7 +48,7 @@ const Register = () => {
                     <h1>Trend</h1>
                     <p><span>Conecte-se</span> aos seus amigos e familiares usando recados e mensagens instantâneas</p>
                     <p><span>Conheça</span> novas pessoas através de amigos de seus amigos e comunidades</p>
-                    <p><span>Compartilhe</span> seus vídeos, fotos e peixões em um só lugar</p>
+                    <p><span>Compartilhe</span> seus vídeos, fotos e paixões em um só lugar</p>
                 </div>
             </div>
             <div className={styles.content}>
