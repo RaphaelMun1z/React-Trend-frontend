@@ -28,9 +28,12 @@ const Post = (post) => {
                             <div className={styles.time}>{new Date(post.time.seconds * 1000).toLocaleDateString("pt-BR")}</div>
                         </div>
                     </Link>
-                    <div className={styles.postImage}>
-                        <img src={post.image} alt="Imagem do post" />
-                    </div>
+
+                    {post.image && (
+                        <div className={styles.postImage}>
+                            <img src={post.image} alt="Imagem do post" />
+                        </div>
+                    )}
 
                     <div className={styles.postContent}>
                         <p>{post.msg}</p>
