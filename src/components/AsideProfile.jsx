@@ -5,7 +5,7 @@ const AsideProfile = () => {
         <div className={styles.profile}>
             <div className={styles.insideProfile}>
                 <div className={styles.imageContainer}>
-                    <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_37.jpg" alt="Imagem do usuário" />
+                    <img src="/user-image.png" alt="Imagem do usuário" />
                 </div>
                 <div className={styles.profileDetails}>
                     <p>Detalhes do perfil</p>

@@ -60,7 +60,7 @@ const Home = () => {
             )}
             {posts && posts.map((post) => (
               <Post
-                userProfileImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLIjxE5kUUdT81FoWXp9le9xwVWfRwFg2uWw&usqp=CAU"
+                userProfileImage="/user-image.png"
                 image={post.imageUrl}
                 name={post.createdBy}
                 time={post.createdAt}
