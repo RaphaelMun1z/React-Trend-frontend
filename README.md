@@ -10,7 +10,7 @@
 ##
 
 ### 💡 Proposta
-<p>&emsp;...</p>
+<p>&emsp;A motivação para desenvolver o "Trend" surgiu do desejo de resgatar a nostalgia e o encanto do Orkut, adaptando suas principais características a um contexto moderno. Este projeto foi impulsionado pela ideia de criar uma experiência que conecte memórias afetivas do passado com as expectativas e demandas dos usuários atuais, ao mesmo tempo em que exploro e aprimoro minhas habilidades em design e desenvolvimento de funcionalidades essenciais de redes sociais. O "Trend" representa meu comprometimento em transformar conceitos nostálgicos em uma solução inovadora e relevante.</p>
 
 ##
 
